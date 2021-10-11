@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Refresh website -->
+    <meta http-equiv="refresh" content="20">
+    <title>BirdCam Server</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <script type="text/javascript">
+        function display_c() {
+            var refresh = 1000; // Refresh rate in milliseconds
+            mytime = setTimeout('display_ct()', refresh)
+        }
+
+        function display_ct() {
+            var x = new Date()
+            document.getElementById('ct').innerHTML = x;
+            display_c();
+        }
+    </script>
+
+</head>
+
+<body onload=display_ct();>
+
+    <center>
+        <h1>BirdCam Server</h1>
+    </center>
+
+    <div class="ui segment">
+        <center>
+            <h4>Szerveridő:</h4>
+            <h4 id='ct'></h4>
+        </center>
+    </div>
+
+    <div class="ui four column grid">
+        <div class="column">
+            <div class="ui red segment">
+                <center>
+                    <p class="ui big header">CPU hőmérséklet</p>
+                    <p> {{cpu.temperature}} °C</p>
+                </center>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui green segment">
+                <center>
+                    <p class="ui big header">Hőmérséklet</p>
+                    <p>{{temperature}} °C</p>
+                </center>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui blue segment">
+                <center>
+                    <p class="ui big header">Páratartalom</p>
+                    <p> {{humidity}} %</p>
+                </center>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui yellow segment">
+                <center>
+                    <p class="ui big header">Fényszenzor</p>
+                    <p>{{ldr.value}}</p>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui segment">
+        <center>
+            <p class="ui big header">LIVE Kamera</p>
+            <img src="http://192.168.1.83:7001/stream.mjpg" width="640" height="480" /> <!-- PORT - can be modified-->
+        </center>
+    </div>
+
+</body>
+
+</html>

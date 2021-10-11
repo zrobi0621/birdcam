@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BirdCam</string>
+    <string name="measurements">Mérési adatok</string>
+    <string name="settings">Beállítások</string>
+    <string name="humidity">Páratartalom</string>
+    <string name="temperature">Hőmérséklet</string>
+    <string name="liveCam">Élőkép</string>
+    <string name="server">Szerver:</string>
+    <string name="connect">Csatlakozás</string>
+    <string name="waiting">Várakozás...</string>
+
+    <string name="sendEmail">E-mail küldés:</string>
+    <string name="emailsTo">Cél E-mail címek:</string>
+    <string name="required">(kötelező)</string>
+    <string name="optional">(opcionális)</string>
+    <string name="maxDailyEmail">Maximum e-mail 1 nap:</string>
+    <string name="timeBetweenEmails">E-mailek közötti idő:</string>
+    <string name="sec">mp</string>
+    <string name="time">Idő:</string>
+    <string name="between">között</string>
+    <string name="lightSensor">Fényszenzor:</string>
+    <string name="detection">Észlelés:</string>
+    <string name="measurementsData">Mérési adatok:</string>
+    <string name="dataExportCsv">Adatok exportálása (.CSV)</string>
+    <string name="dataExportJson">Adatok exportálása (.JSON)</string>
+</resources>
